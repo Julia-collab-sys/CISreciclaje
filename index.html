@@ -3,8 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Proyecto de Reciclaje. Información sobre reciclaje y cuidado del medio ambiente.">
-  <meta name="google-site-verification" content="If7bvdaVJM9Ym4pkG3yqz6sx-bpBzo95Ud7fEibQxU8" />
+  <meta name="description" content="Servicios y productos de refrigeración industrial y comercial. Venta, instalación y mantenimiento.">
   <title>CIS | Centro de Innovacion Sustentable</title>
   <style>
    
@@ -129,6 +128,7 @@
      .menu-horizontal {
        padding: 2rem;
        background-color: #eaf9fd;
+         overflow: visible;
     }
 
      .menu-horizontal h2 {
@@ -137,12 +137,16 @@
         color: #0b3d91;
      }
 
-     .slider {
+    .slider {
         display: flex;
         gap: 1rem;
-        overflow-x: auto;
+        overflow-x: scroll;              /* fuerza scroll */
+        overflow-y: hidden;
         scroll-snap-type: x mandatory;
         padding-bottom: 1rem;
+        -webkit-overflow-scrolling: touch;
+          flex: 0 0 auto;                  /* evita que se achiquen */
+        min-width: 250px;
      }
 
      .slider::-webkit-scrollbar {
@@ -261,6 +265,20 @@
   display: block;
 }
 
+.acciones {
+  list-style: disc;
+  max-width: 800px;
+  margin: 1.5rem auto 3rem;
+  padding-left: 1.5rem;
+}
+
+.acciones li {
+  color: white;
+  font-size: 1.2rem;     /* más grande */
+  font-weight: 700;     /* grueso */
+  margin-bottom: 0.8rem;
+}
+
 
     /* ====== PIE DE PÁGINA ====== */
     footer {
@@ -299,6 +317,26 @@
     padding: 1.5rem;
   }
 }
+.acciones-contenedor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;                 /* separación entre lista e imagen */
+  max-width: 1100px;
+  margin: 0 auto 3rem;
+  padding: 0 1rem;
+}
+
+.acciones {
+  flex: 1;
+}
+
+.acciones-img {
+  flex: 1;
+  max-width: 380px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+}
 
     /* ================= MODO CELULAR ================= */
 @media (max-width: 768px) {
@@ -334,6 +372,14 @@
   nav a {
     margin: 0;
   }
+  .acciones-contenedor {
+  flex-direction: column;
+  text-align: center;
+}
+
+.acciones-img {
+  max-width: 90%;
+}
 }
 
   </style>
@@ -349,12 +395,11 @@
 
    <h1>CIS</h1>
     <nav>
-  <a href="#servicios">Servicios</a>
 
   <div class="dropdown">
     <a href="#contacto" class="dropbtn">Contacto ▾</a>
     <div class="dropdown-content">
-      <a href="tel:1135976705">📞02291430534</a>
+      <a href="tel:1135976705">📞1135976705</a>
       <a href="mailto:produccion@mga.gov.ar">✉️produccion@mga.gov.ar</a>
       <a href="#contacto">📍EcoParque, Miramar, General Alvarado</a>
     </div>
@@ -376,15 +421,12 @@
 
   <section id="servicios" class="servicios">
     <div class="card">
-      <h3>Ecofusion</h3>
-      <p>Ecofusión es un proyecto educativo que integra sustentabilidad, artes visuales,
-         tecnología y diseño contemporáneo. Desde el CIS Miramar, se propone trabajar con
-         estudiantes de nivel secundario en la transformación de plásticos reciclables
-         mediante técnicas de fusión térmica, generando láminas y piezas artísticas que
-         conectan ciencia, diseño y conciencia ambiental.</p>
+      <h3>Cursos</h3>
+      <p>Ofrecemos como uno de nuestros principales servicios una amplia variedad de cursos de reciclaje pensados para que las personas aprendan, de manera práctica y accesible, distintas técnicas para reutilizar los plásticos. En estos espacios de aprendizaje, los participantes pueden descubrir cómo transformar residuos plásticos en nuevos objetos útiles, creativos y también artísticos, promoviendo así una mirada más consciente sobre el cuidado del ambiente. Dentro del CIS se desarrollan diversos proyectos que acompañan esta misión.
+      </p>
     </div>
     <div class="card">
-      <h3>¿Para que sirve CIS?</h3>
+      <h3>CIS</h3>
       <p>El CIS impulsa la formación técnica aplicada a los procesos de innovación y economía
          circular. 
          La propuesta combina el diseño y la fabricación de moldes y matrices metálicas para el
@@ -396,13 +438,8 @@
          y las estudiantes.</p>
     </div>
     <div class="card">
-      <h3>¿Por que reciclar?</h3>
-      <p>El modelo tradicional (economía lineal) produce, usa y descarta. esos desechos suelen
-         terminar en rellenos sanitarios, contaminando aire, tierra y agua. Es por ello que se propone
-         cambiar hacia una economía circular, que busca:
-         ● Reducir el consumo de recursos.
-         ● Minimizar la basura.
-         ● Reutilizar y reciclar materiales.</p>
+      <h3>Incubadora de Emprendimientos</h3>
+      <p>La incubadora de emprendimientos funciona como un espacio de acompañamiento y crecimiento para proyectos que buscan generar impacto positivo en la comunidad. Desde la asociación se asume el compromiso de brindar oportunidades reales a distintos emprendimientos y propuestas formativas, especialmente aquellas orientadas al reciclaje, la economía circular y el desarrollo sustentable. A través de la oferta de cursos, capacitaciones y el acceso a un espacio de trabajo colaborativo, se promueve el intercambio de saberes, la innovación y la visibilización de iniciativas que transforman residuos en valor, fortaleciendo así una red local de emprendedores con conciencia ambiental.</p>
     </div>
   </section>
 
@@ -413,12 +450,21 @@
 <section class="menu-horizontal">
   <h2>Descubrí más sobre nosotros</h2>
 
-  <!-- ===== ECOFUSIÓN ===== -->
+  <!-- ===== IDEANDO FUTURO ===== -->
   <h3 style="text-align:center; margin:1.5rem 0 0.5rem; color:#0b3d91;">
     Ideando Futuro
   </h3>
+  <p></p>
+     
+        <br>
 
   <div class="slider">
+
+     <div class="slide">
+      <img src="imagenes/ideando futuro.jpeg" alt="Intercambio">
+      <p>Logo</p>
+    </div>
+
     <div class="slide">
       <img src="imagenes/foto1.jpeg" alt="Ecofusión">
       <p>Reciclaje</p>
@@ -438,14 +484,22 @@
       <img src="imagenes/yenhorno.jpeg" alt="Horno compresión">
       <p>Horno Compresión</p>
     </div>
-  </div>
+   </div>
 
-  <!-- ===== IDEANDO EL FUTURO ===== -->
+  <!-- ===== ECOFUSION ===== -->
   <h3 style="text-align:center; margin:2rem 0 0.5rem; color:#0b3d91;">
     Ecofusion
   </h3>
+   <p>Ecofusión es un proyecto educativo que integra sustentabilidad, artes visuales,
+         tecnología y diseño contemporáneo. Desde el CIS Miramar, se propone trabajar con
+         estudiantes de nivel secundario en la transformación de plásticos reciclables
+         mediante técnicas de fusión térmica, generando láminas y piezas artísticas que
+         conectan ciencia, diseño y conciencia ambiental.</p>
+     
+        <br>
 
   <div class="slider">
+
     <div class="slide">
       <img src="imagenes/WhatsApp Image 2025-12-15 at 10.33.13.jpeg" alt="Coworking">
       <p>Coworking</p>
@@ -470,9 +524,27 @@
       <img src="imagenes/intercambio.jpeg" alt="Intercambio">
       <p>Intercambio</p>
     </div>
+
+    
   </div>
 </section>
 
+<h3 style="text-align:center; margin:2rem 0 1rem; color:#0b3d91;">
+  ¿Que podemos hacer nosotros?
+</h3>
+
+<div class="acciones-contenedor">
+  <ul class="acciones">
+    <li>Separar los residuos desde casa, escuela o comunidad.</li>
+    <li>Conocer qué tipos de plástico se reciclan.</li>
+    <li>Reutilizar antes de desechar.</li>
+    <li>Participar en campañas de concientización.</li>
+    <li>Reducir el consumo de plásticos descartables.</li>
+    <li>Apoyar políticas públicas de reciclaje.</li>
+  </ul>
+
+  <img src="imagenes/pregunta.png" alt="Reciclaje" class="acciones-img">
+</div>
 
 
 
@@ -503,13 +575,21 @@
   });
 </script>
 
+<!-- ===== MODAL IMAGEN ===== -->
+<div id="imgModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="imgGrande">
+</div>
+
+
 
   <footer id="contacto">
-    <p>📍 EcoParque, calle 44 entre 13 y 15, Miramar, General Alvarado | 📞 02291430534 | ✉️ produccion@mga.gov.ar</p>
+    <p>📍 EcoParque, calle 44 entre 13 y 15, Miramar, General Alvarado | 📞 1135976705 | ✉️ produccion@mga.gov.ar</p>
     <p>© 2025 CIS. Todos los derechos reservados.</p>
   </footer>
 </body>
 </html>
+
 
 
 
