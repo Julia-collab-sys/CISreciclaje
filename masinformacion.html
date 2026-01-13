@@ -89,6 +89,23 @@
       font-size: 0.9rem;
     }
 
+    <style>
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  border-radius: 50%;
+  padding: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  z-index: 1000;
+}
+
+.whatsapp-float img {
+  display: block;
+}
+</style>
+
     @media (max-width: 600px) {
       .contenedor {
         padding: 2rem 1rem;
@@ -160,6 +177,15 @@ HDPE y PP.</p>
 
 </section>
 
+  <a href="https://wa.me/34123456789?text=Hola%20me%20gustaría%20hacer%20una%20consulta"
+   class="whatsapp-float"
+   target="_blank"
+   aria-label="Contactar por WhatsApp">
+   <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+        alt="WhatsApp"
+        width="50">
+</a>
+
 <footer>
   <p>📍 EcoParque, Miramar | 📞 1135976705 | ✉️ produccion@mga.gov.ar</p>
   <p>© 2025 CIS. Todos los derechos reservados.</p>
@@ -167,5 +193,6 @@ HDPE y PP.</p>
 
 </body>
 </html>
+
 
 
