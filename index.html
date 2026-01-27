@@ -406,10 +406,16 @@
 
 /* ====== SECCIÓN PARTICIPAR ====== */
 .participar {
-  background-color: #eaf9fd;
+  background: linear-gradient(
+    to bottom,
+    #6fe3cf 0%,   /* arranca EXACTO donde terminó arriba */
+    #a8f0dc 100%
+  );
   padding: 3rem 2rem;
   text-align: center;
 }
+
+
 
 .participar h2 {
   color: #0b3d91;
@@ -453,6 +459,55 @@
 .participar-item button:hover {
   background-color: #0b3d91;
 }
+
+
+/* ===== SECCIÓN QUÉ PODÉS HACER ===== */
+.participar {
+  background: linear-gradient(
+    to bottom,
+    #6fe3cf 0%,   /* arranca EXACTO donde terminó arriba */
+    #a8f0dc 100%
+  );
+  padding: 3rem 2rem;
+  text-align: center;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.que-podes-hacer {
+  background: linear-gradient(
+    to bottom,
+    #2DC1E3 0%,   /* celeste */
+    #6fe3cf 70%,
+    #6fe3cf 100% /* termina en verde agua */
+  );
+}
+
+.que-podes-hacer h2 {
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+.hacer-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.hacer-item {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 1.5rem;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #0b3d91;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
 
 
     /* ================= MODO CELULAR ================= */
@@ -650,23 +705,38 @@ Acá no sólo se aprende a reciclar o usar máquinas, sino que se trabaja junto 
     </div>   
   </div>
 
+
+<section class="que-podes-hacer">
+  <h2>¿Qué podés hacer acá?</h2>
+
+  <div class="hacer-items">
+    <div class="hacer-item">Traer tu idea</div>
+    <div class="hacer-item">Aprender a reciclar plástico</div>
+    <div class="hacer-item">Usar el espacio de coworking</div>
+    <div class="hacer-item">Participar en talleres</div>
+  </div>
+</section>
+
+
+
+
   <section class="participar">
   <h2>Sumate al CIS</h2>
 
   <div class="participar-botones">
     
     <div class="participar-item">
-      <p>Traer tu idea</p>
+      
       <button onclick="location.href='https://docs.google.com/forms/d/e/1FAIpQLSd0ZUkiyxXTcKLSJTN59769LdUKvB_lYdRBjvnB7rcKeMf-dg/viewform?usp=preview'">Quiero participar</button>
     </div>
 
     <div class="participar-item">
-      <p>Usar el espacio de coworking</p>
-      <button onclick="location.href='agenda.html'">Agendar visita</button>
+   
+      <button onclick="location.href='https://wa.me/1135976705?text=Hola%20me%20gustaría%20hacer%20una%20consulta'">Agendar visita</button>
     </div>
 
        <div class="participar-item actividades-dropdown">
-      <p>Participar en talleres / aprender a reciclar</p>
+     
       <button class="actividades-btn">Ver actividades ▾</button>
     
       <div class="actividades-menu">
@@ -774,6 +844,9 @@ Acá no sólo se aprende a reciclar o usar máquinas, sino que se trabaja junto 
   </footer>
 </body>
 </html>
+
+
+
 
 
 
