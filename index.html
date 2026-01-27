@@ -13,11 +13,17 @@
       padding: 0;
       font-family: 'Arial', sans-serif;
     }
-    body {
-      background-color: #2DC1E3;
-      color: #222;
-      line-height: 1.6;
+   body {
+     background: linear-gradient(
+       to bottom,
+       #2DC1E3 0%,   /* celeste */
+       #6fe3cf 50%,  /* transición */
+       #a8f0dc 100%  /* verde agua */
+     );
+       color: #222;
+       line-height: 1.6;
     }
+
     
     header {
        background-color: #1FC5ED;
@@ -351,6 +357,57 @@
   box-shadow: 0 4px 10px rgba(0,0,0,0.25);
 }
 
+/* ====== SECCIÓN PARTICIPAR ====== */
+.participar {
+  background-color: #eaf9fd;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.participar h2 {
+  color: #0b3d91;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.participar-botones {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.participar-item {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.participar-item p {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.participar-item button {
+  background-color: #1fc5ed;
+  color: white;
+  border: none;
+  padding: 0.7rem 1.4rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s;
+}
+
+.participar-item button:hover {
+  background-color: #0b3d91;
+}
+
+
     /* ================= MODO CELULAR ================= */
 @media (max-width: 768px) {
 
@@ -545,6 +602,30 @@ Acá no sólo se aprende a reciclar o usar máquinas, sino que se trabaja junto 
       <p>Intercambio</p>
     </div>   
   </div>
+
+  <section class="participar">
+  <h2>Sumate al CIS</h2>
+
+  <div class="participar-botones">
+    
+    <div class="participar-item">
+      <p>Traer tu idea</p>
+      <button onclick="location.href='https://docs.google.com/forms/d/e/1FAIpQLSd0ZUkiyxXTcKLSJTN59769LdUKvB_lYdRBjvnB7rcKeMf-dg/viewform?usp=preview'">Quiero participar</button>
+    </div>
+
+    <div class="participar-item">
+      <p>Usar el espacio de coworking</p>
+      <button onclick="location.href='agenda.html'">Agendar visita</button>
+    </div>
+
+    <div class="participar-item">
+      <p>Participar en talleres / aprender a reciclar</p>
+      <button onclick="location.href='actividades.html'">Ver actividades</button>
+    </div>
+
+  </div>
+</section>
+
 
 
 <h3 class="acciones-titulos">
