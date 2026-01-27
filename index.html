@@ -217,6 +217,53 @@
       z-index: 10;
      }
 
+     /* ===== DROPDOWN ACTIVIDADES ===== */
+       .actividades-dropdown {
+         position: relative;
+       }
+       
+       .actividades-btn {
+         background-color: #1fc5ed;
+         color: white;
+         border: none;
+         padding: 0.7rem 1.4rem;
+         border-radius: 6px;
+         cursor: pointer;
+         font-size: 1rem;
+         width: 100%;
+       }
+       
+       .actividades-menu {
+         display: none;
+         position: absolute;
+         left: 0;
+         top: 100%;
+         background: white;
+         width: 100%;
+         margin-top: 0.5rem;
+         border-radius: 8px;
+         box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+         z-index: 50;
+       }
+       
+       .actividades-menu a {
+         display: block;
+         padding: 0.7rem 1rem;
+         text-decoration: none;
+         color: #0b3d91;
+         font-weight: bold;
+       }
+       
+       .actividades-menu a:hover {
+         background-color: #eaf9fd;
+       }
+
+       .actividades-menu.active {
+  display: block;
+}
+
+
+
      /* ===== MODAL IMAGEN ===== */
      .modal {
       display: none;
@@ -618,10 +665,21 @@ Acá no sólo se aprende a reciclar o usar máquinas, sino que se trabaja junto 
       <button onclick="location.href='agenda.html'">Agendar visita</button>
     </div>
 
-    <div class="participar-item">
+       <div class="participar-item actividades-dropdown">
       <p>Participar en talleres / aprender a reciclar</p>
-      <button onclick="location.href='actividades.html'">Ver actividades</button>
-    </div>
+      <button class="actividades-btn">Ver actividades ▾</button>
+    
+      <div class="actividades-menu">
+
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSelJleAH1i_2VIVhPj-gf1mq6KYCm8lfhAxcsegqMPlnbbxnA/viewform?usp=preview" target="_blank">Curso de reciclado de materiales plasticos y cuidado del ambiente</a>
+
+        <a href="https://link-formulario-curso2" target="_blank">Taller de     ecofusión</a>
+
+        <a href="https://link-formulario-curso3" target="_blank">Capacitación     emprendedores</a>
+      </div>
+
+</div>
+
 
   </div>
 </section>
@@ -667,12 +725,32 @@ Acá no sólo se aprende a reciclar o usar máquinas, sino que se trabaja junto 
     modal.style.display = "none";
   };
 </script>
+
+
+
 <script>
   document.querySelector(".dropbtn").addEventListener("click", function (e) {
     e.preventDefault();
     this.parentElement.classList.toggle("active");
   });
 </script>
+
+
+
+<script>
+  document.querySelector(".actividades-btn").addEventListener("click", function (e) {
+    e.stopPropagation();
+    this.nextElementSibling.classList.toggle("active");
+  });
+
+  document.addEventListener("click", function () {
+    document.querySelectorAll(".actividades-menu").forEach(menu => {
+      menu.classList.remove("active");
+    });
+  });
+</script>
+
+
 
 <!-- ===== MODAL IMAGEN ===== -->
 <div id="imgModal" class="modal">
