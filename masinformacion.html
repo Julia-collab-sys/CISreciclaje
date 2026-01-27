@@ -106,9 +106,31 @@
      z-index: 1000;
    }
 
-.whatsapp-float img {
+    .whatsapp-float img {
     display: block;
    }
+
+   .whatsapp-float {
+  bottom: 20px;
+  right: 20px;
+}
+
+.instagram-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  background-color: #E1306C;
+  border-radius: 50%;
+  padding: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+}
+.instagram-float {
+  bottom: 90px;
+  right: 20px;
+}
+
 
 
     @media (max-width: 600px) {
@@ -195,6 +217,16 @@
         alt="WhatsApp"
         width="50">
 </a>
+
+<a href="https://www.instagram.com/cis.miramar/"
+   class="instagram-float"
+   target="_blank"
+   aria-label="Ir a Instagram">
+   <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
+        alt="Instagram"
+        width="50">
+</a>
+
 
 <footer>
   <p>📍 EcoParque, Miramar | 📞 1135976705 | ✉️ produccion@mga.gov.ar</p>
