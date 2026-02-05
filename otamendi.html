@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Otamendi</title>
 
-  <!-- Fuente moderna -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
   <style>
@@ -35,15 +34,20 @@
       animation: aparecer 0.8s ease;
     }
 
-    h1 {
-      text-align: center;
-      margin-bottom: 20px;
-      font-weight: 600;
+    h2, h3 {
+      margin-top: 20px;
+      margin-bottom: 10px;
       color: #333;
+    }
+
+    p {
+      margin-bottom: 15px;
+      color: #444;
     }
 
     ul {
       list-style: none;
+      margin-bottom: 15px;
     }
 
     li {
@@ -66,19 +70,29 @@
       }
     }
 
-        .volver {
-      display: inline-block;
+    /* CONTENEDOR DE BOTONES */
+    .botones {
+      margin-top: 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .volver {
       background-color: #0b3d91;
       color: white;
       padding: 0.7rem 1.4rem;
       border-radius: 6px;
       text-decoration: none;
       font-weight: bold;
-      margin-top: 1rem;
     }
 
     .volver:hover {
       background-color: #082f6b;
+    }
+
+    .instagram img {
+      width: 50px;
     }
   </style>
 </head>
@@ -86,62 +100,64 @@
 <body>
   <div class="card">
     <h2>Punto Digital General Alvarado 2</h2>
-      <p><strong>Comandante Nicanor Otamendi – Centro Cultural</strong></p>
+    <p><strong>Comandante Nicanor Otamendi – Centro Cultural</strong></p>
 
-      <p>
-        El Punto Digital General Alvarado 2 es un espacio público y gratuito
-        pensado para acercar la tecnología, la capacitación y el acceso a
-        trámites digitales a toda la comunidad.
-      </p>
+    <p>
+      El Punto Digital General Alvarado 2 es un espacio público y gratuito
+      pensado para acercar la tecnología, la capacitación y el acceso a
+      trámites digitales a toda la comunidad.
+    </p>
 
-      <h3>📅 Lo que hicimos durante 2025</h3>
-      <ul>
-        <li>📌 Proyecciones infantiles y familiares (Centro Cultural)</li>
-        <li>📌 Talleres de Canva – CENS</li>
-        <li>📌 Talleres de PC e Internet – Escuela N° 502</li>
-        <li>📌 Cursos de Diseño Gráfico, PC y Programación – CFL</li>
-        <li>📌 Espacio para tareas escolares – Programa Envión</li>
-        <li>📌 Curso anual para adultos mayores (celulares y computadoras)</li>
-        <li>📌 Taller de hojas de cálculo</li>
-        <li>📌 Charla introductoria sobre Inteligencia Artificial</li> 
-      </ul>
+    <h3>📅 Lo que hicimos durante 2025</h3>
+    <ul>
+      <li>📌 Proyecciones infantiles y familiares (Centro Cultural)</li>
+      <li>📌 Talleres de Canva – CENS</li>
+      <li>📌 Talleres de PC e Internet – Escuela N° 502</li>
+      <li>📌 Cursos de Diseño Gráfico, PC y Programación – CFL</li>
+      <li>📌 Espacio para tareas escolares – Programa Envión</li>
+      <li>📌 Curso anual para adultos mayores</li>
+      <li>📌 Taller de hojas de cálculo</li>
+      <li>📌 Charla sobre Inteligencia Artificial</li>
+    </ul>
 
-      <h3>💻 Servicios permanentes</h3>
-      <ul>
-        <li>📌Navegación libre</li>
-        <li>📌Asistencia en trámites digitales</li>
-        <li>📌Validación de identidad Mi Argentina</li>
-        <li>📌Acompañamiento en cursos virtuales</li>
-      </ul>
+    <h3>💻 Servicios permanentes</h3>
+    <ul>
+      <li>📌 Navegación libre</li>
+      <li>📌 Asistencia en trámites digitales</li>
+      <li>📌 Validación Mi Argentina</li>
+      <li>📌 Acompañamiento en cursos virtuales</li>
+    </ul>
 
-      <h3>🚀 Propuestas para 2026</h3>
-      <ul>
-        <li>📌Alfabetización digital para adultos mayores</li>
-        <li>📌Uso práctico de Excel</li>
-        <li>📌Talleres de Inteligencia Artificial</li>
-        <li>📌Curso de programación web para principiantes</li>
-      </ul>
+    <h3>🚀 Propuestas para 2026</h3>
+    <ul>
+      <li>📌 Alfabetización digital</li>
+      <li>📌 Excel práctico</li>
+      <li>📌 Talleres de IA</li>
+      <li>📌 Programación web</li>
+    </ul>
 
-      <p><strong>
-        Un espacio abierto a toda la comunidad para aprender, crear y resolver
-        trámites digitales.
-      </strong></p>
+    <p><strong>
+      Un espacio abierto a toda la comunidad para aprender, crear y resolver
+      trámites digitales.
+    </strong></p>
+
+    <!-- BOTONES ABAJO -->
+    <div class="botones">
+      <a href="https://www.instagram.com/puntodigitalotamendi"
+         class="instagram"
+         target="_blank"
+         aria-label="Ir a Instagram">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+      </a>
+
+      <a class="volver" href="index.html">← Volver al inicio</a>
+    </div>
   </div>
-
-  <a href="https://www.instagram.com/puntodigitalotamendi"
-   class="instagram-float"
-   target="_blank"
-   aria-label="Ir a Instagram">
-   <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
-        alt="Instagram"
-        width="50">
-</a>
-
-
-    <a class="volver" href="index.html">← Volver al inicio</a>
-
 </body>
 </html>
+
+
+
 
 
 
